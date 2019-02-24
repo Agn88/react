@@ -6,19 +6,30 @@ import Header from './source/components/Header';
 import axios from 'axios';
 
 export default class App extends React.Component {
-  renderList(){
-    
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      peoples: []
+    };
+  }
+
+  componentDidMount(){
     /* Promises */
     axios
-        .get('https://randomuser.me/api/?nat=br&results=5')
-        .then(response => {
-          const { results } = response.data;
-          const names = results.map(people => people.name.first);
-          console.log(names);
-        })
+      .get('https://randomuser.me/api/?nat=br&results=5')
+      .then(response => {
+        const { results } = response.data;
+        this.setState({
+          peoples: results
+        });
+    })
 
+  }
+
+  renderList(){
     
-
     //return textElements;
   }
 
@@ -28,7 +39,7 @@ export default class App extends React.Component {
       <View>
        
         <Header title="Pessoas!"/>
-        { this.renderList() }
+       
       </View>
     );
   }
