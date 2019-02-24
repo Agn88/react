@@ -29,8 +29,12 @@ export default class App extends React.Component {
   }
 
   renderList(){
-    
-    //return textElements;
+    const textElements = this.state.peoples.map(people => {
+      const { first } = people.name;
+      return <Text key={first}>{ first }</Text>
+    })
+
+    return textElements;
   }
 
 
@@ -39,7 +43,7 @@ export default class App extends React.Component {
       <View>
        
         <Header title="Pessoas!"/>
-       
+        {this.renderList()}
       </View>
     );
   }
