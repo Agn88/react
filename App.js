@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Text, View } from 'react-native';
 
 import Header from './source/components/Header';
 import PeopleList from './source/components/PeopleList';
