@@ -22,7 +22,7 @@ const style = StyleSheet.create({
     },
 
     title: {
-        fontSize: 50,
+        fontSize: 40,
         color: '#fff'
     }
 })
