@@ -1,4 +1,16 @@
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 import PeoplePage from './source/pages/PeoplePage';
 
+const AppNavigator = createStackNavigator({
+  'Main': {
+    screen: PeoplePage
+  }
+});
 
-export default PeoplePage;
+
+const AppContainer = createAppContainer(AppNavigator);
+
+
+export default AppContainer;
+
+
