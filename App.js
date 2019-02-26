@@ -1,10 +1,15 @@
 //yarn add react-navigation -> Importando lib
 import { createAppContainer, createStackNavigator } from 'react-navigation';
 import PeoplePage from './source/pages/PeoplePage';
+import PeopleDetailPage from './source/pages/PeopleDetailPage';
+
 
 const AppNavigator = createStackNavigator({
   'Main': {
     screen: PeoplePage
+  },
+  'PeopleDetail': {
+    screen: PeopleDetailPage
   }
 }, {
   defaultNavigationOptions:{
