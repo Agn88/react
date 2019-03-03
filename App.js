@@ -8,16 +8,16 @@ import { capitalizeFirstLetter } from './source/util';
 
 
 const AppNavigator = createStackNavigator({
-  'Main': {
-    screen: PeoplePage
-  },
+  
   'PeopleDetail': {
     screen: PeopleDetailPage,
     navigationOptions: ({navigation}) => {
 
-      const peopleName = capitalizeFirstLetter(
-				navigation.state.params.people.name.first
-			);
+      //const peopleName = capitalizeFirstLetter(
+			//	navigation.state.params.people.name.first
+      //);
+      
+      const peopleName = "@todo MUDAR ISSO"
 
       return ({
         title: peopleName,
@@ -27,6 +27,9 @@ const AppNavigator = createStackNavigator({
         }
       });
     }
+  },
+  'Main': {
+    screen: PeoplePage
   },
 }, {
   defaultNavigationOptions:{
